@@ -18,10 +18,12 @@ class TourAdapter (val context: Context?, private val places: ArrayList<Places>)
 
         holder.itemView.tour_image.clipToOutline = true
         Picasso.get().load(places[position].url).into(holder.itemView.tour_image)
+
+        //kensburn animation here
+        holder.itemView.tour_image.resume()
         holder.itemView.tour_title.text = places[position].title
         holder.itemView.tour_description.text = places[position].description
         holder.itemView.ratingBar.rating = places[position].rating!!
-
 
 
         //Image Animation
